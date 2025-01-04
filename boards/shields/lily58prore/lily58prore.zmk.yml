@@ -2,7 +2,7 @@ file_format: "1"
 id: lily58prore
 name: lily58prore
 type: shield
-url: https://github.com/kata0510/lily58prore
+url: https://github.com/kata0510/lily58
 requires: [pro_micro]
 exposes: [i2c_oled]
 features:
