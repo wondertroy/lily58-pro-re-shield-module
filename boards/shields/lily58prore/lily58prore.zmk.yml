@@ -1,0 +1,14 @@
+file_format: "1"
+id: lily58prore
+name: lily58prore
+type: shield
+url: https://github.com/kata0510/lily58prore
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - studio
+siblings:
+  - lily58prore_left
+  - lily58prore_right
