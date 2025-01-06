@@ -29,8 +29,8 @@
 // |  SHIFT  |    Z    |    X    |    C    |    V    |    B    |  LOWER  |        |  RAISE  |    N     |    M    |    ,    |    .    |    /    |  SHIFT  |
     &kp LSHFT   &kp Z     &kp X     &kp C     &kp V     &kp B     &mo 1               &mo 2     &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH &kp RSHFT
 // |---------|---------|---------|---------|---------|---------|---------|        |---------|----------|---------|---------|---------|---------|---------|
-//                               |   ALT   |   GUI   |   LOWER |  SPACE  |        |  ENTER  |   RAISE  |   BSPC  |   GUI   |
-                                   &kp LALT  &kp LGUI    &mo 1   &kp RET           &kp SPACE    &mo 2   &kp BSPC  &kp RGUI
+//                               |   ALT   |   GUI   |   LOWER |  SPACE  |        |  SPACE  |   RAISE  |   BSPC  |   GUI   |
+                                   &kp LALT  &kp LGUI    &mo 1  &kp SPACE         &kp SPACE    &mo 2   &kp BSPC  &kp RGUI
 //                               |---------|---------|---------|---------|        |---------|----------|---------|---------|            
             >;
 
@@ -42,39 +42,39 @@
             bindings = <
 // |---------|---------|---------|---------|---------|---------|                                    |----------|---------|---------|---------|---------|---------|
 // |   BTCLR |   BT1   |   BT2   |    BT3  |   BT4   |   BT5   |                                    |          |         |         |         |         |         |
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                          &trans     &trans     &trans    &trans    &trans   &trans 
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                            &trans     &trans   &trans     &trans   &trans    &trans 
 // |---------|---------|---------|---------|---------|---------|                                    |----------|---------|---------|---------|---------|---------|
-// |    F1   |    F2   |    F3   |    F4   |    F5   |    F6   |                                    |    F7    |    F8   |    F9   |    F10  |   F11   |   F12   |
-     &kp F1     &kp F2    &kp F3    &kp F4    &kp F5   &kp F6                                          &kp F7     &kp F8    &kp F9    &kp F10   &kp F11  &kp F12
+// |         |         |         |     (   |     )   |         |                                    |          |    7    |    8    |    9    |   +     |         |
+     &trans     &trans   &trans    &kp LPAR  &kp RPAR   &trans                                          &trans     &kp N7    &kp N8   &kp N9  &kp PLUS   &trans
 // |---------|---------|---------|---------|---------|---------|                                    |----------|---------|---------|---------|---------|---------|
-// |     `   |    !    |    @    |    #    |    $    |    %    |                                    |    ^     |    &    |    *    |    (    |    )    |   ~     |
-    &kp GRAVE  &kp EXCL  &kp AT    &kp HASH &kp DOLLAR &kp PRCNT                                     &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &kp TILDE
+// |         |         |         |    [    |    ]    |    %    |                                    |    ^     |    4    |    5    |    6    |    :    |    =    |
+     &trans     &trans   &trans   &kp LBKT &kp RBKT   &kp PRCNT                                     &kp CARET   &kp N4   &kp N5     &kp N6    &kp COLON &kp EQUAL
 // |---------|---------|---------|---------|---------|---------|---------|                |---------|----------|---------|---------|---------|---------|---------|
-// |         |    on   |   off   |         |         |         |         |                |         |          |    _    |    +    |    {    |    }    |   "|"   |
-&trans &ext_power EP_ON &ext_power EP_OFF &trans &trans &trans    &trans                    &trans    &trans   &kp MINUS  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE
+// |         |         |         |    {    |    }    |         |         |                |         |          |    1    |    2    |    3    |    }    |   "|"   |
+     &trans    &trans     &trans  &kp LBRC  &kp RBRC    &trans    &trans                    &trans    &trans    &kp N1     &kp N2    &kp N3   &kp RBRC  &kp PIPE
 // |---------|---------|---------|---------|---------|---------|---------|                |---------|----------|---------|---------|---------|---------|---------|
-//                               |         |         |         |         |                |         |          |         |         |
-                                    &trans    &trans    &trans    &trans                     &trans    &trans    &trans    &trans
+//                               |         |         |         |  RETURN |                |  RETURN |    *     |    0    |    #    |
+                                    &trans    &trans    &trans  &kp RET                     &kp RET    &trans    &kp N0    &trans
 //                               |---------|---------|---------|---------|                |---------|----------|---------|---------|            
             >;
 
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp DEL BSPC>;
+            sensor-bindings = <&inc_dec_kp SPACE TAB &inc_dec_kp DEL BSPC>;
         };
 
         raise_layer {
             bindings = <
 // |---------|---------|---------|---------|---------|---------|                           |----------|---------|---------|---------|---------|---------|
-// |         |         |         |         |         |         |                           |          |         |         |         |         |         |
-     &trans    &trans     &trans    &trans    &trans   &trans                                 &trans     &trans   &trans    &trans    &trans     &trans
+// |         |         |         |         |         |         |                           |    on    |   off   |         |         |         |         |
+     &trans    &trans     &trans    &trans    &trans   &trans                       &ext_power EP_ON &ext_power EP_OFF &trans &trans   &trans    &trans 
 // |---------|---------|---------|---------|---------|---------|                           |----------|---------|---------|---------|---------|---------|
-// |    `    |    1    |    2    |    3    |    4    |   5     |                           |    6     |    7    |    8    |    9    |    0    |         |
-    &kp GRAVE  &kp N1     &kp N2    &kp N3    &kp N4   &kp N5                                  &kp N6   &kp N7    &kp N8    &kp N9    &kp N0    &trans
+// |         |         |         |         |         |         |                           |          |   F7    |    F8   |   F9    |         |         |
+     &trans     &trans   &trans     &trans   &trans    &trans                                  &trans    &kp F7   &kp F8    &kp F9     &trans    &trans
 // |---------|---------|---------|---------|---------|---------|                           |----------|---------|---------|---------|---------|---------|
-// |    F1   |    F2   |    F3   |    F4   |    F5   |   F6    |                           |          |    <-   |    v    |    ^    |   ->    |         |
-     &kp F1     &kp F2   &kp F3    &kp F4     &kp F5   &kp F6                                 &trans    &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &trans   
+// |         |         |         |         |         |         |                           |          |   F4    |   F5    |   F6    |         |         |
+     &trans     &trans   &trans     &trans   &trans    &trans                                 &trans   &kp F4    &kp F5     &kp F6     &trans    &trans   
 // |---------|---------|---------|---------|---------|---------|---------|       |---------|----------|---------|---------|---------|---------|---------|
-// |    F7   |    F8   |    F9   |    F10  |    F11  |   F12   |         |       |         |    +     |    -    |    =    |    [    |    ]    |    \    |
-      &kp F7    &kp F8   &kp F9    &kp F10    &kp F11  &kp F12   &trans            &trans  &kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT   &kp RBKT  &kp BSLH
+// |         |         |         |         |         |         |         |       |         |    +     |    F1   |   F2    |   F3    |         |    \    |
+     &trans    &trans     &trans    &trans   &trans    &trans    &trans            &trans  &kp KP_PLUS  &kp F1     &kp F2    &kp F3   &trans   &kp BSLH
 // |---------|---------|---------|---------|---------|---------|---------|       |---------|----------|---------|---------|---------|---------|---------|
 //                               |         |         |         |         |       |         |          |         |         |
                                     &trans    &trans    &trans    &trans            &trans    &trans     &trans    &trans
