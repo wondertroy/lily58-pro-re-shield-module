@@ -23,11 +23,11 @@
 // |   TAB   |    Q    |    W    |    E    |    R    |    T    |                            |    Y     |    U    |    I    |    O    |    P    |    -    |
      &kp TAB   &kp Q      &kp W     &kp E     &kp R     &kp T                                  &kp Y      &kp U      &kp I     &kp O   &kp P    &kp MINUS
 // |---------|---------|---------|---------|---------|---------|                            |----------|---------|---------|---------|---------|---------|
-// |  SHIFT  |    A    |    S    |    D    |    F    |    G    |                            |    H     |    J    |    K    |    L    |    ;    |    '    |
-    &kp LSHIFT   &kp A     &kp S    &kp D      &kp F     &kp G                                  &kp H      &kp J     &kp K     &kp L    &kp SEMI  &kp SQT
+// |  CTRL   |    A    |    S    |    D    |    F    |    G    |                            |    H     |    J    |    K    |    L    |    ;    |    '    |
+    &kp LCTRL   &kp A     &kp S    &kp D      &kp F     &kp G                                  &kp H      &kp J     &kp K     &kp L    &kp SEMI  &kp SQT
 // |---------|---------|---------|---------|---------|---------|---------|        |---------|----------|---------|---------|---------|---------|---------|
-// |  CTRL   |    Z    |    X    |    C    |    V    |    B    |  LOWER  |        |  RAISE  |    N     |    M    |    ,    |    .    |    /    |  SHIFT  |
-    &kp LCTRL   &kp Z     &kp X     &kp C     &kp V     &kp B     &mo 1               &mo 2     &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH &kp RSHFT
+// |  SHIFT  |    Z    |    X    |    C    |    V    |    B    |  LOWER  |        |  RAISE  |    N     |    M    |    ,    |    .    |    /    |  SHIFT  |
+    &kp LSHIFT   &kp Z     &kp X     &kp C     &kp V     &kp B     &mo 1               &mo 2     &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH &kp RSHFT
 // |---------|---------|---------|---------|---------|---------|---------|        |---------|----------|---------|---------|---------|---------|---------|
 //                               |   ALT   |   GUI   |   LOWER |  SPACE  |        |  SPACE  |   BSPC  |   GUI    |  RAISE  |
                                   &kp LALT  &kp LGUI    &mo 1  &kp SPACE          &kp SPACE   &kp BSPC  &kp RGUI     &mo 2
